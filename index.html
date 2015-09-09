@@ -2,5 +2,15 @@
 layout: land
 ---
 <div id="land">
-  <h1>The Quest of Mount Doom</h1>
+  <header>
+    <h1>The Fellowship of The Ring</h1>
+  </header>
+
+  <nav>
+    {% for page in site.pages %}
+      {% if page.title %}
+      <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
 </div>
